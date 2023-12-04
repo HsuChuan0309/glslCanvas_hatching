@@ -24,7 +24,7 @@ void main() {
 
     vec3 color = vec3(.0);
 
-    st = (st-.5)*.100+.5;
+    st = (st - 0.5) * 0.1 + 0.5;
     vec2 pictureSt = st;  // Use 'st' directly without additional adjustments
 
     // Tile the space
@@ -56,8 +56,8 @@ void main() {
         }
     }
 
-    // Apply the texture
-    vec4 texColor = texture2D(u_tex0, pictureSt);
+    // Scale the texture coordinates before applying
+    vec4 texColor = texture2D(u_tex0, pictureSt * vec2(2.0));
 
     // Draw cells with texture
     color += step(0.060, m_dist) * texColor.rgb;
