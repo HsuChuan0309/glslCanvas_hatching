@@ -9,9 +9,12 @@
 
         <style>
             canvas {
-                 width: 100%;
-                 height: 100%;
-                 display: block;
+                canvas {
+                    width: 100vw; /* 使用视窗宽度作为单位 */
+                    height: 100vh; /* 使用视窗高度作为单位 */
+                    display: block;
+                }
+
             }
             body {
                 background: #101515;
@@ -69,6 +72,7 @@
     </body>
 
     <script>
+        
         var canvas = document.getElementById("glslCanvas");
         var sandbox = new GlslCanvas(canvas);
         var texCounter = 0;
@@ -76,8 +80,8 @@
         var sandbox_title = "";
         var sandbox_author = "";
         var sandbox_thumbnail = ""; 
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
+        canvas.style.width = '100vw'; /* 使用视窗宽度作为单位 */
+        canvas.style.height = '100vh'; /* 使用视窗高度作为单位 */
 
         function parseQuery (qstr) {
             var query = {};
