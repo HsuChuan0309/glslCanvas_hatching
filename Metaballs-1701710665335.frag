@@ -24,7 +24,7 @@ void main() {
 
     vec3 color = vec3(.0);
 
-    st = (st-.5)*.75+.5;
+    st = (st-.5)*.100+.5;
     vec2 pictureSt = st;  // Use 'st' directly without additional adjustments
 
     // Tile the space
